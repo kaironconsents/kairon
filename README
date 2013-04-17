@@ -1,0 +1,23 @@
+KAIRON CONSENTS DEMO
+====================
+
+This project contains an example of an user interface to empower patients to control the release of their health information.
+
+Prerequisites
+-------------
+
+The code has been tested with the following dependencies and versions.
+
+* Java 6
+* Tomcat 6
+* MySQL 5.6
+
+Building & Running Kairon
+-------------------------
+
+1. Create a database using the included kairon_db.sql file (created using MySQL).
+2. Configure the application context file src/main/webapp/WEB-INF/application-context.xml with your database connection information.
+3. Ensure mysql connector jar file is in the endorsed or lib directory of your application server/container.
+4. Run mvn package. This will create kairon.war in the target/ directory.
+5. Deploy target/kairon.war to your servlet container/application server
+6. Open http://localhost:8080/kairon/

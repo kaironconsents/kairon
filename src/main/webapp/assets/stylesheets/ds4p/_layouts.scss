@@ -1,0 +1,58 @@
+// I use this file as a staging area until I know where I want to stash it away in another sass file.
+
+body {
+  background: #E6E6E6;
+}
+
+header, section {
+  position: relative;
+  min-width: 1375px;
+  height: 175px;
+  padding: 25px;
+}
+header {
+  &.login {
+    border: 2px solid #33BED0;
+    border-bottom: 4px solid #33BED0;
+  }
+  background: #CBCBCB;
+  border-bottom: 4px solid #33BED0;
+}
+
+section.login { margin-top: 50px; }
+
+.highlight-red { color: #E14E3E; }
+.highlight-white { color: #fff; }
+
+.column {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.general, .add-row {
+  border-bottom: 1px solid $mediumBorder;
+  margin-bottom: 20px;
+}
+.general {
+  margin-top: -20px;
+  padding-top: 70px;
+}
+.add-row {
+  margin-top: -30px;
+  padding-bottom: 20px;
+}
+
+.date-column {
+  padding-left: 0px;
+
+  h3 { margin-left: 0; }
+  .date { margin-bottom: 50px; }
+}
+
+.name-column input.provider-type-ahead {
+  height: 40px;
+  margin-top: 5px;
+  width: 250px;
+}
+
+.share-column h3 { margin-left: 15px; }

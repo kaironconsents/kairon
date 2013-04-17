@@ -1,0 +1,9 @@
+<Context crossContext="true" reloadable="true" debug="1">
+	<Resource name="jdbc/kaironconsents" auth="Container" type="javax.sql.DataSource"
+		driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://127.0.0.1:3306/kaironconsents"
+		username="root" password="" maxActive="100" maxIdle="10" 
+		maxWait="-1" removeAbandoned="true" removeAbandonedTimeout="60" logAbandoned="true" validationQuery="SELECT 1"
+		autoReconnectForPools="true"
+	 />
+
+</Context>

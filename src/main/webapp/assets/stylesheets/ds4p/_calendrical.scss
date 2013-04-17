@@ -1,0 +1,149 @@
+$background_color:    #FFF;
+$text_color:          #000;
+$border_color:        #33BED0;
+$grey_color:          #999;
+$selection_color:     #E14E3E;
+$today_color:         #E6E6E6;
+$today_border_color:  #D6D6D6;
+
+$formFocus: #E14E3E;
+
+.calendricalDatePopup {
+  margin-left: 1px;
+  background: $background_color;
+  padding: 2px;
+  text-align: center;
+  width: 194px;
+  z-index: 100;
+  margin-top: -10px;
+
+  border-color: rgba($calendarFocus, 0.8);
+  outline: 0;
+  @include box-shadow(#{inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($calendarFocus, 0.6)});
+  border-top: 0px;
+
+  table {
+    border-collapse: collapse;
+    width: 194px;
+
+    .monthCell {
+
+      font-size: 14px;
+      padding: 2px 0;
+      a {
+        color: #33BED0;
+        display: block;
+        float: left;
+        line-height: 20px;
+      }
+      .prevMonth, .nextMonth {
+        width: 24px;
+      }
+      .monthName {
+        width: 134px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    th {
+      text-align: center;
+    }
+    
+    td {
+      text-align: center;
+      font-size: 12px;
+      padding: 0;
+      a {
+        display: block;
+        color: $text_color;
+        padding: 2px 3px;
+        &:hover {
+          background: $selection_color;
+          border: none;
+          padding: 2px 3px;
+        }
+      }
+      &.today a {
+        background: $today_color;
+      }
+      &.selected a {
+        background: $selection_color;
+      }
+      &.today_selected a {
+        background: $today_color;
+        border: solid 1px $today_border_color;
+        padding: 1px 2px;
+      }
+      &.nonMonth a {
+        color: $grey_color;
+      }
+    }
+  }
+}
+
+.calendricalTimePopup {
+  background: $background_color;
+  border: solid 1px $border_color;
+  width: 110px;
+  height: 130px;
+  overflow: auto;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      margin: 0;
+      a, a:visited {
+        text-indent: 10px;
+        padding: 4px;
+        display: block;
+        color: $text_color;
+        text-decoration: none;
+      }
+      a:hover, &.selected a {
+        background: $selection_color;
+      }
+    }
+  }
+}
+.calendricalEndTimePopup {
+  width: 194px;
+}
+
+.input-append {
+  border-bottom: 0px;
+}
+.input-append.end-date {
+  margin-left: 50px;
+}
+.input-append .add-on {
+  width: 50px;
+  height: 40px;
+  background-color: #fff;
+  border-left: 0px;
+  margin-top: -10px;
+
+  i.icon-calendar { 
+    width: 50px;
+    height: 50px;
+
+    background-size: 30px 30px;
+    background-image: url(../images/calendar-inactive.png);
+    background-position: 10px 2px;
+
+    &.active { background-image: url(../images/calendar-active.png); }
+  }
+  &.active {
+    border-color: rgba($calendarFocus, 0.8);
+    outline: 0;
+    @include box-shadow(#{inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($calendarFocus, 0.6)});
+
+    border-left: 0px;
+    border-bottom: 0px;
+
+    i.icon-calendar { background-image: url(../images/calendar-active.png); }
+  }
+}

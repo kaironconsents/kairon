@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DS4P - Request Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DS4P.">
+    <meta name="author" content="Adam Goldstein">
+
+    <link href="assets/stylesheets/ds4p.css" rel="stylesheet">
+
+    <script type="text/javascript" src="assets/javascripts/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/underscore-min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/backbone-min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/jquery/jquery-ui-slider.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/jquery/jquery.calendrical.js"></script>
+    <script type="text/javascript" src="assets/javascripts/jquery/purl.js"></script>
+    <script type="text/javascript" src="assets/javascripts/bootstrap/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="assets/javascripts/bootstrap/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="assets/javascripts/bootstrap/bootstrap-typeahead.js"></script>
+    <script type="text/javascript" src="assets/javascripts/ds4p/templates.js"></script>
+    <script type="text/javascript" src="assets/javascripts/ds4p/backbone/models.js"></script>
+    <script type="text/javascript" src="assets/javascripts/ds4p/backbone/views.js"></script>
+    <script type="text/javascript" src="assets/javascripts/ds4p/manager.js"></script>
+    <script type="text/javascript" src="assets/javascripts/data.js"></script>
+    <!-- <script type="text/javascript" src="assets/javascripts/ds4p/test-manager.js"></script>
+    <script type="text/javascript" src="assets/javascripts/test-data.js"></script> -->
+    <script type="text/javascript" src="assets/javascripts/ds4p/tooltips.js"></script>
+    <!-- Standard HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <!-- Header with logo and tagline -->
+    <header>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div id="logo" class="span12">
+            <h1>
+              <span class="highlight-red">my</span> <span class="highlight-white">sharing preferences</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div id="navigation" class="container-fluid">
+        <div class="tabbable row-fluid">
+          <div class="nav-tab span3 image-tab treatment active">
+            <a id="treat-nav" href="#TREAT" data-toggle="tab">treatment</a>
+          </div>
+          <div class="nav-tab span5 image-tab emergency bordered">
+            <a id="etreat-nav" href="#ETREAT" data-toggle="tab">emergency</a>
+          </div>
+          <div class="nav-tab span3 image-tab research">
+            <a id="hresch-nav" href="#HRESCH" data-toggle="tab">research</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <section id="content" class="container-fluid manager">
+      <div class="container-fluid">
+        <div id="usages" class="row-fluid">
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

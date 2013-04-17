@@ -1,0 +1,93 @@
+#navigation {
+  margin-top: 40px;
+}
+
+.nav-tab {
+  position: relative;
+
+  &.bordered {
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+  }
+
+  padding: 35px 0px;
+  margin-bottom: 40px;
+
+  a, a:hover, a.active {
+    font-weight: 100;
+    background-color: #CBCBCB;
+    color: #343434;
+    size: 64px;
+    text-transform: uppercase;
+    font-size: 42px;
+    text-decoration: none;
+  }
+
+  &.image-tab { 
+    a {
+      margin-left: 0px;
+      border-left: 60px solid rgba(203, 203, 203, .7);
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding;
+      background-clip: padding-box;
+    }
+    
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 50px 50px;
+    background-position: left center;
+
+    &.active a { border-color: rgba(203, 203, 203, 0); }
+    &.treatment {
+      background-position: left 20px;
+      background-image: url(../images/overall-bullet.png);
+    }
+    &.emergency {
+      a {
+        margin-left: 20px;
+        border-left: 80px solid rgba(203, 203, 203, .7);
+      }
+      &.active a { border-color: rgba(203, 203, 203, 0); }
+
+      background-position: 30px 20px;
+      background-image: url(../images/emergency-bullet.png);
+    }
+    &.research {
+      background-size: 32px 51px;
+      background-position: 15px 20px;
+      background-image: url(../images/research-bullet.png);
+    }
+  }
+
+  &.active:before {
+    position: absolute;
+    content: "";
+    
+    left: 13%;
+    top: 100%;
+    margin-left: $arrowMargin * -1;
+
+    width: 0;
+    height: 0;
+    border-left: $arrowWidth solid transparent;
+    border-right: $arrowWidth solid transparent;
+    border-top: $arrowHeight solid #33BED0;
+  }
+  &.active:after {
+    position: absolute;
+    content: "";
+    
+    left: 13%;
+    top: 100%;
+    margin-left: ($arrowMargin * -1) + $arrowOffset + 1px;
+
+    width: 0;
+    height: 0;
+    border-left: $arrowWidth - $arrowOffset solid transparent;
+    border-right: $arrowWidth - $arrowOffset + 1px solid transparent;
+    border-top: $arrowHeight - $arrowOffset + 1px solid #CBCBCB;
+  }
+}
